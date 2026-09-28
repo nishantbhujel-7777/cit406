@@ -15,14 +15,14 @@ insert into doctors (doctor_id, department_id, first_name, last_name, specialty,
    'David', 'Kim', 'Cardiology', 'dkim@clinic.test', '305-555-0333');
 
 insert into patients (patient_id, first_name, last_name, date_of_birth, phone, email) values
-  ('p0000000-0000-0000-0000-000000000001', 'Nishant', 'Bhujel',   '1995-04-12', '305-555-1001', 'nishant@example.com'),
-  ('p0000000-0000-0000-0000-000000000002', 'Alice',   'Chen',     '1988-11-02', '305-555-1002', 'alice@example.com'),
-  ('p0000000-0000-0000-0000-000000000003', 'Bob',     'Martinez', '1979-06-23', '305-555-1003', 'bob@example.com');
+  ('c0000000-0000-0000-0000-000000000001', 'Nishant', 'Bhujel',   '1995-04-12', '305-555-1001', 'nishant@example.com'),
+  ('c0000000-0000-0000-0000-000000000002', 'Alice',   'Chen',     '1988-11-02', '305-555-1002', 'alice@example.com'),
+  ('c0000000-0000-0000-0000-000000000003', 'Bob',     'Martinez', '1979-06-23', '305-555-1003', 'bob@example.com');
 
 insert into addresses (patient_id, street, city, state, postal_code, country) values
-  ('p0000000-0000-0000-0000-000000000001', '100 Biscayne Blvd', 'Miami', 'FL', '33132', 'USA'),
-  ('p0000000-0000-0000-0000-000000000002', '250 Ocean Dr',      'Miami', 'FL', '33139', 'USA'),
-  ('p0000000-0000-0000-0000-000000000003', '88 Brickell Ave',   'Miami', 'FL', '33131', 'USA');
+  ('c0000000-0000-0000-0000-000000000001', '100 Biscayne Blvd', 'Miami', 'FL', '33132', 'USA'),
+  ('c0000000-0000-0000-0000-000000000002', '250 Ocean Dr',      'Miami', 'FL', '33139', 'USA'),
+  ('c0000000-0000-0000-0000-000000000003', '88 Brickell Ave',   'Miami', 'FL', '33131', 'USA');
 
 insert into services (service_id, name, description, cost_cents) values
   ('50000000-0000-0000-0000-000000000001', 'General Consultation', 'Standard office visit', 12000),
@@ -32,15 +32,15 @@ insert into services (service_id, name, description, cost_cents) values
 
 insert into appointments (appointment_id, patient_id, doctor_id, scheduled_at, status, notes) values
   ('a0000000-0000-0000-0000-000000000001',
-   'p0000000-0000-0000-0000-000000000001',
+   'c0000000-0000-0000-0000-000000000001',
    'd1000000-0000-0000-0000-000000000001',
    '2026-09-20 09:00:00-04', 'completed', 'Routine check-up'),
   ('a0000000-0000-0000-0000-000000000002',
-   'p0000000-0000-0000-0000-000000000002',
+   'c0000000-0000-0000-0000-000000000002',
    'd1000000-0000-0000-0000-000000000003',
    '2026-09-22 14:30:00-04', 'scheduled', 'Chest pain follow-up'),
   ('a0000000-0000-0000-0000-000000000003',
-   'p0000000-0000-0000-0000-000000000003',
+   'c0000000-0000-0000-0000-000000000003',
    'd1000000-0000-0000-0000-000000000002',
    '2026-09-25 10:15:00-04', 'scheduled', 'Child vaccination');
 
@@ -51,11 +51,11 @@ insert into appointment_services (appointment_id, service_id, quantity, unit_cen
   ('a0000000-0000-0000-0000-000000000003', '50000000-0000-0000-0000-000000000004', 2,  3500);
 
 insert into medical_records (patient_id, doctor_id, appointment_id, diagnosis, prescription) values
-  ('p0000000-0000-0000-0000-000000000001',
+  ('c0000000-0000-0000-0000-000000000001',
    'd1000000-0000-0000-0000-000000000001',
    'a0000000-0000-0000-0000-000000000001',
    'Mild hypertension', 'Lisinopril 10mg daily'),
-  ('p0000000-0000-0000-0000-000000000002',
+  ('c0000000-0000-0000-0000-000000000002',
    'd1000000-0000-0000-0000-000000000003',
    null,
    'Suspected angina', 'Nitroglycerin as needed');
